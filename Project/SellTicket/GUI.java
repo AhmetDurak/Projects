@@ -1,4 +1,4 @@
-package PasswordValidation.SellTicket;
+package SellTicket;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package PasswordValidation.SellTicket;
+package SellTicket;
 
 import java.io.IOException;
 import java.util.Scanner;

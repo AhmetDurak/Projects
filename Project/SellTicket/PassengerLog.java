@@ -1,4 +1,4 @@
-package PasswordValidation.SellTicket;
+package SellTicket;
 
 public class PassengerLog {
 

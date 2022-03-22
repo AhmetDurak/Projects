@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 import static SchoolMS.Main.*;
-import static SchoolMS.myStudent.*;
+
 public class Admin extends Teacher {
     Scanner scanner = new Scanner(System.in);
     String userName;
