@@ -13,7 +13,7 @@ Mathematics: Mathematics:
 Physic: Physic:
 Biology: Biology:
 Chemistry: Chemistry:
-English: English:
+English: null
 -------------------------
 
 userName: Betül Balaban
@@ -31,7 +31,7 @@ Mathematics: Mathematics:
 Physic: Physic:
 Biology: Biology:
 Chemistry: Chemistry:
-English: English:
+English: null
 -------------------------
 
 userName: Ahmet Durak
@@ -49,7 +49,7 @@ Mathematics: Mathematics:
 Physic: Physic:
 Biology: Biology:
 Chemistry: Chemistry:
-English: 55
+English: 90
 -------------------------
 
 userName: Mustafa Karagül
@@ -67,7 +67,7 @@ Mathematics: Mathematics:
 Physic: Physic:
 Biology: Biology:
 Chemistry: Chemistry:
-English: English:
+English: null
 -------------------------
 
 userName: Murat Koca
@@ -85,7 +85,7 @@ Mathematics: Mathematics:
 Physic: Physic:
 Biology: Biology:
 Chemistry: Chemistry:
-English: English:
+English: null
 -------------------------
 
 userName: Hamza Akgün
@@ -103,6 +103,6 @@ Mathematics: Mathematics:
 Physic: Physic:
 Biology: Biology:
 Chemistry: Chemistry:
-English: English:
+English: null
 -------------------------
 

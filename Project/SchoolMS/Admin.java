@@ -4,12 +4,14 @@ import java.io.IOException;
 import java.util.Scanner;
 
 import static SchoolMS.Main.*;
+import static SchoolMS.Log.studentList;
+import static SchoolMS.Log.teacherList;
 
 public class Admin extends Teacher {
     Scanner scanner = new Scanner(System.in);
     String userName;
 
-    public void Student() throws IOException {
+    public void student() throws IOException {
         System.out.println("Please enter the name of Student:");
         userName = scanner.nextLine();
         studentList.putIfAbsent(userName, new Student(userName));

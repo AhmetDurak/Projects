@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
-import static SchoolMS.myStudent.*;
+import static SchoolMS.Log.*;
 
 class UserLogin implements ActionListener, Runnable {
 
@@ -20,7 +20,6 @@ class UserLogin implements ActionListener, Runnable {
     private static JPasswordField passwordText;
     private static JButton button;
     private HashMap<String, Student> guiList;
-
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -51,11 +50,11 @@ class UserLogin implements ActionListener, Runnable {
     }
 
     boolean passwordCheck(String user, String password) {
-        String password1 = myStudent.studentList.get(user).password;
+        String password1 = Log.studentList.get(user).password;
         if (password1.isEmpty()) {
             System.out.println("Please create a password:");
             password1 = scanner.nextLine();
-            myStudent.studentList.get(user).password = password1;
+            Log.studentList.get(user).password = password1;
             System.out.println("Password is created!");
             run();
             return false;
@@ -131,8 +130,9 @@ public class Menu implements ActionListener {
     JPanel panel;
     JButton profile, lecturePlan, grades, exit;
     JTextPane textPane;
-    JLabel imageLabel;
+    JTable table;
     String user;
+    boolean draw = false;
 
     public Menu(String user) {
         this.user = user;
@@ -179,6 +179,12 @@ public class Menu implements ActionListener {
             textPane.setFont(myFont);
             panel.add(textPane);
 
+
+
+
+
+
+
         }
 
         frame.add(panel);
@@ -199,15 +205,28 @@ public class Menu implements ActionListener {
                     "School fee: " + studentList.get(this.user).schoolFee + "\n";
             String stars = "NumberOfStars: " + studentList.get(this.user).numberOfStar + "\n";
             textPane.setText(text);
+            textPane.remove(table);
 
 
         }
         if (e.getSource() == lecturePlan) {
             textPane.setText("");
+            textPane.remove(table);
 
         }
         if (e.getSource() == grades) {
             textPane.setText("");
+
+            String data[][]=
+                    {{"101","Amit","670"},
+                            {"102","Jai","780"},
+                            {"101","Sachin","700"}};
+            String column[]={"ID","NAME","SALARY"};
+            table = new JTable(data, column);
+            table.setBounds(10,60,465,390);
+            textPane.add(table);
+
+
 
         }
         if (e.getSource() == exit) {

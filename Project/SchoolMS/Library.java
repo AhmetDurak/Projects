@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Library {
     String newBook;
     Scanner scanner = new Scanner(System.in);
-    Scanner readFile = new Scanner(new File("C:/Users/volka/IdeaProjects/Projects/src/SchoolMS/BookList.txt"));
+    Scanner readFile = new Scanner(new File("C:/Users/volka/IdeaProjects/Projects/Project/SchoolMS/BookList.txt"));
 
     ArrayList<String> bookList = new ArrayList<>();
 
@@ -69,7 +69,7 @@ public class Library {
     }
 
     void saveFile() throws IOException {
-        FileWriter saveBookList = new FileWriter("C:/Users/volka/IdeaProjects/Projects/src/SchoolMS/BookList.txt");
+        FileWriter saveBookList = new FileWriter("C:/Users/volka/IdeaProjects/Projects/Project/SchoolMS/BookList.txt");
         for (int i = 0; i < bookList.size(); i++) {
             saveBookList.append(String.valueOf(i + 1)).append(". ").append(bookList.get(i)).append("\n");
         }

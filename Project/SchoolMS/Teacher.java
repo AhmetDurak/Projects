@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import static SchoolMS.myStudent.studentList;
+import static SchoolMS.Log.studentList;
 
 public class Teacher extends Student{
     Scanner scanner = new Scanner(System.in);

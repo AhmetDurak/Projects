@@ -4,11 +4,19 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Scanner;
 
-public class Log extends myStudent {
-    Log() throws FileNotFoundException {
-        Scanner getStudent = new Scanner(new File("C:/Users/volka/IdeaProjects/Projects/src/SchoolMS/StudentLog.txt"));
+public class Log {
+    static HashMap<String, Student> studentList = new HashMap<>();
+    static HashMap<String, Teacher> teacherList = new HashMap<>();
+    static Scanner scanner = new Scanner(System.in);
+
+}
+
+class StudentLog extends Log {
+    StudentLog() throws FileNotFoundException {
+        Scanner getStudent = new Scanner(new File("C:/Users/volka/IdeaProjects/Projects/Project/SchoolMS/StudentLog.txt"));
 
         String userName;
         Student student = new Student();
@@ -16,31 +24,67 @@ public class Log extends myStudent {
             String text = getStudent.nextLine();
             String value;
             value = text.substring(text.indexOf(" ") + 1);
-            if (text.contains("userName:")) {
-                userName = text.substring(text.indexOf(" ") + 1);
-                studentList.put(userName, new Student());
-                student = studentList.get(userName);
-                student.userName = userName;
-                student.firstName = userName.substring(0, userName.indexOf(" "));
-                student.familyName = userName.substring(userName.indexOf(" "));
+            //if (text.contains("userName:")) {
+            //    userName = text.substring(text.indexOf(" ") + 1);
+            //    studentList.put(userName, new Student());
+            //    student = studentList.get(userName);
+            //    student.userName = userName;
+            //    student.firstName = userName.substring(0, userName.indexOf(" "));
+            //    student.familyName = userName.substring(userName.indexOf(" "));
+//
+            //}
+            //else if (text.contains("password")) student.password = value;
+            //else if (text.contains("gender")) student.gender = value;
+            //else if (text.contains("age")) student.age = value;
+            //else if (text.contains("birthdate")) student.dateOfBirth = value;
+            //else if (text.contains("homeAddress")) student.homeAddress = value;
+            //else if (text.contains("schoolNumber")) student.schoolNumber = value;
+            //else if (text.contains("classTeacher")) student.classTeacher = value;
+            //else if (text.contains("NumberOfStars")) student.numberOfStar = value;
+            //else if (text.contains("schoolfee")) student.schoolFee = "true".equals(value);
+            //
+            //else if (text.contains("Mathematics:")) student.mathematics = value;
+            //else if (text.contains("Physic:")) student.physic = value;
+            //else if (text.contains("Biology:")) student.biology = value;
+            //else if (text.contains("Chemistry:")) student.chemistry = value;
+            //else if (text.contains("English:")) student.english = value;
+
+            String pattern = text.substring(0, text.indexOf(":")+1);
+            switch(pattern){
+                case "userName:":
+                {
+                    userName = text.substring(text.indexOf(" ") + 1);
+                    studentList.put(userName, new Student());
+                    student = studentList.get(userName);
+                    student.userName = userName;
+                    student.firstName = userName.substring(0, userName.indexOf(" "));
+                    student.familyName = userName.substring(userName.indexOf(" "));
+                    break;
+                }
+                case "password:": student.password = value; break;
+                case "gender:": student.gender = value; break;
+                case "age:": student.age = value;   break;
+                case "birthdate:": student.dateOfBirth = value; break;
+                case "homeAddress:": student.homeAddress = value; break;
+                case "schoolNumber:": student.schoolNumber = value; break;
+                case "classTeacher:": student.classTeacher = value; break;
+                case "NumberOfStars:": student.numberOfStar = value; break;
+                case "schoolfee:": student.schoolFee = "true".equals(value); break;
+                case "Mathematics:": student.mathematics = value; break;
+                case "Physic:": student.physic = value; break;
+                case "Biology:": student.biology = value; break;
+                case "Chemistry:": student.chemistry = value; break;
+                case "English": student.english = value; break;
+                default:
 
             }
-            else if (text.contains("password")) student.password = value;
-            else if (text.contains("gender")) student.gender = value;
-            else if (text.contains("age")) student.age = value;
-            else if (text.contains("birthdate")) student.dateOfBirth = value;
-            else if (text.contains("homeAddress")) student.homeAddress = value;
-            else if (text.contains("schoolNumber")) student.schoolNumber = value;
-            else if (text.contains("classTeacher")) student.classTeacher = value;
-            else if (text.contains("NumberOfStars")) student.numberOfStar = value;
-            else if (text.contains("schoolfee")) student.schoolFee = "true".equals(value);
-            else if (text.contains("Mathematics:")) student.mathematics = value;
-            else if (text.contains("Physic:")) student.physic = value;
-            else if (text.contains("Biology:")) student.biology = value;
-            else if (text.contains("Chemistry:")) student.chemistry = value;
-            else if (text.contains("English:")) student.english = value;
-
         }
+
+
+
+
+
+
         //for (String user : studentList.keySet()) {
         //    System.out.println(user);
         //}
@@ -54,7 +98,7 @@ public class Log extends myStudent {
             Student student = studentList.get(userName);
             infoStudent = infoStudent.concat("" + "userName: " + student.userName + "\n" + "password: " + student.password + "\n" + "gender: " + student.gender + "\n" + "age: " + student.age + "\n" + "birthdate: " + student.dateOfBirth + "\n" + "homeAddress: " + student.homeAddress + "\n" + "schoolNumber: " + student.schoolNumber + "\n" + "classTeacher: " + student.classTeacher + "\n" + "NumberOfStars: " + student.numberOfStar + "\n" + "schoolfee: " + student.schoolFee + "\n" + "\n" + "Mathematics: " + student.mathematics + "\n" + "Physic: " + student.physic + "\n" + "Biology: " + student.biology + "\n" + "Chemistry: " + student.chemistry + "\n" + "English: " + student.english + "\n" + "-------------------------\n\n");
         }
-        FileWriter studentWrite = new FileWriter("C:/Users/volka/IdeaProjects/Projects/src/SchoolMS/StudentLog.txt");
+        FileWriter studentWrite = new FileWriter("C:/Users/volka/IdeaProjects/Projects/Project/SchoolMS/StudentLog.txt");
         studentWrite.write(infoStudent);
         studentWrite.close();
     }
@@ -64,21 +108,21 @@ public class Log extends myStudent {
         String studentName = scanner.nextLine();
 
         if (studentList.containsKey(studentName)) {
-            studentList.remove(studentName);
-        } else {
-            System.out.println("Student couldn't find!");
-            System.out.println("1. Try again 2. Cancel");
-            if (scanner.nextLine().equals("1")) {
-                eraseStudent();
-            }
+        studentList.remove(studentName);
+    } else {
+        System.out.println("Student couldn't find!");
+        System.out.println("1. Try again 2. Cancel");
+        if (scanner.nextLine().equals("1")) {
+            eraseStudent();
         }
-        saveStudent();
     }
+    saveStudent();
+}
 }
 
-class TeacherLog extends myStudent {
+class TeacherLog extends Log {
     TeacherLog() throws FileNotFoundException {
-        Scanner getTeacher = new Scanner(new File("C:/Users/volka/IdeaProjects/Projects/src/SchoolMS/TeacherLog.txt"));
+        Scanner getTeacher = new Scanner(new File("C:/Users/volka/IdeaProjects/Projects/Project/SchoolMS/TeacherLog.txt"));
 
         String userName = "";
         while (getTeacher.hasNextLine()) {
@@ -117,7 +161,7 @@ class TeacherLog extends myStudent {
 
                         "\n" + "-------------------------\n\n");
             }
-            FileWriter teacherWrite = new FileWriter("C:/Users/volka/IdeaProjects/Projects/src/SchoolMS/TeacherLog.txt");
+            FileWriter teacherWrite = new FileWriter("C:/Users/volka/IdeaProjects/Projects/Project/SchoolMS/TeacherLog.txt");
             teacherWrite.write(infoTeacher);
             teacherWrite.close();
         } catch (IOException ignored) {
