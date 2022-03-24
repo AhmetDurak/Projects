@@ -19,11 +19,8 @@ public class IsPasswordStrong {
             if (Character.isDigit(everyLetter)) hasNumber = true;
             if (!Character.isLetterOrDigit(everyLetter)) hasSpecialChar = true;
         }
-
         return hasEnoughLength && hasUpperCase && hasLowerCase&& hasNumber && hasSpecialChar;
     }
-
-
 }
 
 
