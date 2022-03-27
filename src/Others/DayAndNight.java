@@ -1,3 +1,5 @@
+package Others;
+
 public class DayAndNight {
     public static void main(String[] args) {
         System.out.println(new DayAndNight().calculate(2592000));
