@@ -1,22 +1,38 @@
 package Others2;
 
 
+import java.util.ArrayList;
+
 public class Solution {
-    int value;
-    Solution(){
-        this("");
+
+    public static void main(String[] args) {
+        Student student1 = new Student();
+
     }
 
-    Solution(String value){
-        this(4);
-    }
 
-    Solution(int value){
-        this.value = value;
-    }
-
-    public static void main(String[] args){
-        Solution solution = new Solution();
-        System.out.println(solution.value);
-    }
 }
+class Student{
+    String clothes,  notes, lessons;
+
+    Student(){
+        this("5");
+        this.clothes = "Jacket, shoes, tie";
+        this.lessons = "Math, Chemical, Biology, English";
+
+    }
+    Student(String grade){
+        this(Integer.parseInt(grade));
+    }
+
+    Student(int degree){
+        System.out.println(degree);
+    }
+
+    void addNote(){}
+    void isPassedExam(){}
+
+}
+
+
+// public, default, protected, private

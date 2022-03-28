@@ -13,3 +13,15 @@ public enum Difficullty {
         this.howDifficult = String.valueOf(isItDifficult);
     }
 }
+
+enum Scope{
+    BEGINNER,
+    INTERMEDIATE,
+    UPPER_INTERMEDIATE,
+    ADVANCED;
+
+
+    String difficultyLevel;
+
+
+}
