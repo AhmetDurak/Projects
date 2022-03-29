@@ -33,6 +33,7 @@ class Main {
         Car car = new Car();
         //System.out.println(car.maxSpeed);
         car.display();
+        //System.out.println(car.maxSpeed); value in the car object
 
         car.vroom();
     }
