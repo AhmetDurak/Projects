@@ -2,20 +2,20 @@ package SellTicket;
 
 public class PassengerLog {
 
-    static String[] LogFlixbus = new String[5];
-    static String[] LogEgetur = new String[5];
-    static String[] LogAydoganlar = new String[5];
-    static String[] LogHasAdana = new String[5];
+    public static String[] LogFlixbus = new String[5];
+    public static String[] LogEgetur = new String[5];
+    public static String[] LogAydoganlar = new String[5];
+    public static String[] LogHasAdana = new String[5];
 
-    static String[] LogTurkishAir = new String[15];
-    static String[] LogEurowings = new String[15];
-    static String[] LogFranceAir = new String[15];
-    static String[] LogLufthansa = new String[15];
+    public static String[] LogTurkishAir = new String[15];
+    public static String[] LogEurowings = new String[15];
+    public static String[] LogFranceAir = new String[15];
+    public static String[] LogLufthansa = new String[15];
 
-    static String[] LogUbahn = new String[10];
-    static String[] LogSbahn = new String[10];
-    static String[] LogIre = new String[10];
-    static String[] LogIce = new String[10];
+    public static String[] LogUbahn = new String[10];
+    public static String[] LogSbahn = new String[10];
+    public static String[] LogIre = new String[10];
+    public static String[] LogIce = new String[10];
 
 
     public static void SaveSoldTicketBus(String dateOfTicket, String passengerDetail) {
