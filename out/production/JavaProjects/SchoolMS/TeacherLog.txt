@@ -4,7 +4,7 @@ gender: female
 age: 45
 birthdate: 11.11.1977
 homeAddress: Alexanderstr.
-Which_class: 1-A
+Which_class: 1-ConstructorSuper.A
 Branch: Mathematics
 NumberOfStars: 5
 
@@ -16,7 +16,7 @@ gender: female
 age: 45
 birthdate: 11.11.1977
 homeAddress: Alexanderstr.
-Which_class: 2-A
+Which_class: 2-ConstructorSuper.A
 Branch: English
 NumberOfStars: 5
 
@@ -28,7 +28,7 @@ gender: male
 age: 45
 birthdate: 11.11.1977
 homeAddress: Alexanderstr.
-Which_class: 2-A
+Which_class: 2-ConstructorSuper.A
 Branch: Physic
 NumberOfStars: 5
 
@@ -40,7 +40,7 @@ gender: male
 age: 45
 birthdate: 11.11.1977
 homeAddress: Alexanderstr.
-Which_class: 2-A
+Which_class: 2-ConstructorSuper.A
 Branch: Biology
 NumberOfStars: 5
 
@@ -52,7 +52,7 @@ gender: male
 age: 45
 birthdate: 11.11.1977
 homeAddress: Alexanderstr.
-Which_class: 2-A
+Which_class: 2-ConstructorSuper.A
 Branch: Chemistry
 NumberOfStars: 5
 

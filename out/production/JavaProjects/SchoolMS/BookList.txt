@@ -46,7 +46,7 @@
 46. Tristram Shandy by Laurence Sterne
 47. Leaves of Grass by Walt Whitman
 48. The Magic Mountain by Thomas Mann
-49. A Portrait of the Artist as a Young Man by James Joyce
+49. ConstructorSuper.A Portrait of the Artist as a Young Man by James Joyce
 50. Midnight's Children by Salman Rushdie
 51. Licht der Nacht
 52. Kürk Mantolu Madonna

@@ -1,21 +1,28 @@
 package Test_package;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>();
-        list.addAll(Arrays.asList(1, 2, 3, 4, 5, 6, 7));
+        Main main = new Main();
+        main.start();
+    }
+    public void start(){
+        String last = "Z";
+        Container container = new Container();
+        container.setInitial("C");
+        another(container, last);
+        System.out.print(container.getInitial());  // B
 
-        for (Integer each : list) {
-            if (each % 2 != 0) {
-                continue;
-            }
-            System.out.println(each + " ");
-            break;
-        }
+    }
+
+    public void another (Container initialHolder, String newInitial){
+        //newInitial.toLowerCase();
+        initialHolder.setInitial("B");
+        //Container second = new Container();
+        //initialHolder = second;
+        System.out.print(initialHolder.getInitial());// A
+        System.out.print(newInitial);                // Z
+
     }
 }
 
