@@ -6,6 +6,10 @@
       <sourceFolder url="file://$MODULE_DIR$/Muhtar" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Project" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaProgramming-src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/replitTaksSolutions" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/taskSolutions" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
