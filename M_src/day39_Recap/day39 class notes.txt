@@ -29,7 +29,7 @@ next Thursday:
 	final keyword
 
 next Friday:
-	Exceptions & Exception handlings
+	Exceptions & ExceptionExamples handlings
 
 -------------------------------------
 

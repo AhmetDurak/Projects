@@ -40,7 +40,7 @@ Exceptions: unexpected or unwanted events
 
 
 
-Exception handlings:
+ExceptionExamples handlings:
 		
 		1. Try & Catch blocks: used for handling checked and unchecked exceptions
 
@@ -71,7 +71,7 @@ Interview Question:
 next Thursday:
 		5. throws keyword
 		6. throw keyword
-		7. Custom Exception
+		7. Custom ExceptionExamples
 
 
 Next Next Monday (Jan 31st):

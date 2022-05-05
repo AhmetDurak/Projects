@@ -16,7 +16,7 @@ Warmup task:
 
 
 
-Exception Handlings:
+ExceptionExamples Handlings:
 		
 		1. try & catch: used for handling checked & unchecked exceptions
 

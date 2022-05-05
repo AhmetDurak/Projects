@@ -14,7 +14,6 @@ class MyClass {
         myClass.count = 1;
         myClass.myMethod(myClass);
 
-
         System.out.println(myClass.count);
         System.out.println(secondClass.count);
     }
