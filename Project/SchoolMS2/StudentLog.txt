@@ -49,7 +49,7 @@ Mathematics: Mathematics:
 Physic: Physic:
 Biology: Biology:
 Chemistry: Chemistry:
-English: null
+English: 90
 -------------------------
 
 userName: Mustafa Karagül

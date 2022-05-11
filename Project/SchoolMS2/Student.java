@@ -1,10 +1,10 @@
-package SchoolMS;
+package SchoolMS2;
 
-import java.util.HashMap;
 import java.util.Scanner;
 
-public class Student {
-    HashMap<String, Integer> grades = new HashMap<>();
+public class Student extends School {
+
+    //HashMap<String, Integer> grades = new HashMap<>();
     Scanner scanner = new Scanner(System.in);
     String userName, password = "";
     String firstName, familyName;
@@ -23,23 +23,23 @@ public class Student {
         this.userName = userName;
         this.firstName = userName.substring(0, userName.indexOf(" "));
         this.familyName = userName.substring(userName.indexOf(" "));
-       //System.out.println("Gender: ");
-       //this.gender = scanner.nextLine();
-       //System.out.println("Age: ");
-       //this.age = scanner.nextLine();
-       //System.out.println("Date of Birth : ");
-       //this.dateOfBirth = scanner.nextLine();
-       //System.out.println("Home Address : ");
-       //this.homeAddress = scanner.nextLine();
-       //System.out.println("School Number : ");
-       //this.schoolNumber = scanner.nextLine();
-       //System.out.println("Class Teacher : ");
+        //System.out.println("Gender: ");
+        //this.gender = scanner.nextLine();
+        //System.out.println("Age: ");
+        //this.age = scanner.nextLine();
+        //System.out.println("Date of Birth : ");
+        //this.dateOfBirth = scanner.nextLine();
+        //System.out.println("Home Address : ");
+        //this.homeAddress = scanner.nextLine();
+        //System.out.println("School Number : ");
+        //this.schoolNumber = scanner.nextLine();
+        //System.out.println("Class Teacher : ");
 
-       //this.classTeacher = scanner.nextLine();
-       //this.numberOfStar = 5;
-       //System.out.println("Is School fee payed by parents?");
-       //schoolFee = scanner.nextBoolean();
-       //scanner.nextLine();
+        //this.classTeacher = scanner.nextLine();
+        //this.numberOfStar = 5;
+        //System.out.println("Is School fee payed by parents?");
+        //schoolFee = scanner.nextBoolean();
+        //scanner.nextLine();
 
         run();
 
@@ -104,36 +104,11 @@ public class Student {
 
     }
 
-    void grades(String lecture){
-        System.out.println();
-        switch (lecture.toLowerCase()){
-            case "mathematics":
-                System.out.println("Please enter the note: ");
-                this.mathematics = scanner.nextLine();
-                System.out.println(this.userName + "Mathematics: " + mathematics);
-                break;
-            case "physic":
-                System.out.println("Please enter the note: ");
-                this.physic = scanner.nextLine();
-                System.out.println(this.userName + "Physic: " + physic);
-                break;
-            case "biology":
-                System.out.println("Please enter the note: ");
-                this.biology = scanner.nextLine();
-                System.out.println(this.userName + "Biology: " + biology);
-                break;
-            case "chemistry":
-                System.out.println("Please enter the note: ");
-                this.chemistry = scanner.nextLine();
-                System.out.println(this.userName + "Chemistry: " + chemistry);
-                break;
-            case "english":
-                System.out.println("Please enter the note: ");
-                this.english = scanner.nextLine();
-                System.out.println(this.userName + "English: " + english);
-                break;
-            default:
-                System.out.println("Teacher branch is not on the list!");
-        }
+
+
+    //    -->   LIBRARY   <--
+
+    public void showBookList() {
+        super.showBookList();
     }
 }

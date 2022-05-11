@@ -12,15 +12,15 @@ public class Main {
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        Thread userLogin = new Thread(new UserLogin());
-        userLogin.start();
         log = new StudentLog();
         teacherLog = new TeacherLog();
         library = new Library();
 
 
-        Log.teacherList.get("Nurdan Töre").infoTeacher("Nurdan Töre");
-        log.saveStudent();
+        //Log.teacherList.get("Nurdan Töre").infoTeacher("Nurdan Töre");
+        //log.saveStudent();
+
+        Log.studentList.get("Kemal Torun").infoStudent("Kemal Torun","1234");
 
         //library.showBookList();
         //library.getDeleteBook();
