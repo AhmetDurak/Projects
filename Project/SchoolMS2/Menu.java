@@ -13,18 +13,16 @@ public class Menu {
 
     }
 
-    public static void main(String[] args) {
-        Student student = new Student();
-        Admin admin = new Admin();
-
-
-
-    }
+    //public static void main(String[] args) {
+    //    Student student = new Student();
+    //    Admin admin = new Admin();
+    //}
 
 
     void library(){
         Scanner readFile = null;
         try {
+            String path = "C:/Users/volka//IdeaProjects/Projects/Project/SchoolMS2/BookList.txt";
             readFile = new Scanner(new File(path));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -42,7 +40,5 @@ public class Menu {
         }
     }
 
-    void logDownload() {
-
-    }
+    void logDownload() {}
 }

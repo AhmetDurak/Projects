@@ -2,13 +2,14 @@ package SchoolMS2;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Teacher extends Student{
+public class Teacher extends Student {
     Scanner scanner = new Scanner(System.in);
-
-
+    Archive archive = new Archive();
+    void nothing(){
+        archive.studentLog.getInfoStudent();
+    }
 
 
 
@@ -104,10 +105,15 @@ public class Teacher extends Student{
     }
 
     private void saveFile() throws IOException {
+        String path = "C:/Users/volka//IdeaProjects/Projects/Project/SchoolMS2/BookList.txt";
         FileWriter saveBookList = new FileWriter(path);
         for (int i = 0; i < bookList.size(); i++) {
             saveBookList.append(String.valueOf(i + 1)).append(". ").append(bookList.get(i)).append("\n");
         }
         saveBookList.close();
+    }
+
+    void addGrade(String name, int mathematics, int biology){
+        System.out.println("Teacher adds grades");
     }
 }
