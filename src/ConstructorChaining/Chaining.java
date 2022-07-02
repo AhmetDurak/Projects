@@ -12,8 +12,7 @@ public class Chaining {
     }
 
     Chaining(int value, String result){
-
-
+        System.out.println("Parent Constructor");
     }
 
 }
@@ -21,10 +20,16 @@ public class Chaining {
 class subClass extends Chaining{
 
     subClass(){
-        super(5, "result");
+        this(5);
+        System.out.println("Subclass");
+    }
+    subClass(int value){
+        super(value, "result");
+        System.out.println("Subclass " + value);
     }
 
-    void callConstructor(){
+    public static void main(String[] args) {
+        subClass subClass = new subClass(5);
     }
 }
 

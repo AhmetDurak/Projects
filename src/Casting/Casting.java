@@ -3,13 +3,11 @@ package Casting;
 public class Casting {  // up-casting needs nothing. Java does it by itself.
     public static void main(String[] args) {
         Dog myAnimal = new Dog();
-        Animal myAnimal2 = new Cat();
+        Cat myAnimal2 = new Cat();
 
          
         doAnimalStuff(myAnimal);
-        doAnimalStuff(myAnimal2);
-
-
+        //doAnimalStuff(myAnimal2);
 
     }
 

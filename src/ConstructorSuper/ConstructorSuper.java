@@ -2,10 +2,11 @@ package ConstructorSuper;
 
 public class ConstructorSuper extends B{
     public ConstructorSuper(){
-        System.out.println("C ");
+        super();
+        System.out.println("Constructor Super");
     }
     public static void main(String[] args) {
-        C oby = new C();
+        ConstructorSuper constructorSuper = new ConstructorSuper();
     }
 }
 

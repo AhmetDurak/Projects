@@ -12,3 +12,19 @@ public class Animal {
     }
 
 }
+class Dog extends Animal{
+
+    @Override
+    public void makeNoise(){
+        System.out.println("Woof woof!");
+    }
+
+    public void growl(){
+        System.out.println("Grrrrr");
+    }
+}
+class Cat extends Animal{
+    void meow(){
+        System.out.println("Meowwwww");
+    }
+}

@@ -17,7 +17,7 @@ public class V1_SetUp {
     ResultSet rs = null;
 
     public V1_SetUp() {
-        //jdbc:mysql://localhost:3306/demo" + host + ":" + port + "/" + db_name;
+        //jdbc:mysql://localhost:3306/demo"
         String url = "jdbc:mysql://" + host + ":" + port + "/" + db_name;
 
         try {
@@ -205,6 +205,6 @@ public class V1_SetUp {
 
     public static void main(String[] args) {
         V1_SetUp connectionSetUp = new V1_SetUp();
-        connectionSetUp.getEmployees();
+
     }
 }

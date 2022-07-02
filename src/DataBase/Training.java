@@ -121,6 +121,14 @@ public class Training {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
         Training training = new Training();
-        training.setIdEmployee();
+        training.deleteEmployee();
     }
 }
+
+
+
+
+
+
+
+
