@@ -1,4 +1,4 @@
-package DataBase;
+package DataBase.Demo;
 
 import java.sql.*;
 

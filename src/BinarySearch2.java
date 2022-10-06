@@ -1,30 +1,56 @@
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class BinarySearch2 {
     public static void main(String[] args) {
-        List<Integer> number = Arrays.asList(7,3,4,5,2);
-        int[] myArr = {2,3,4,5};
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,59,32,16,39,92,57,69,8,9,10,11,12,13,14,15,80,84));
 
-        HashSet<Integer> mySet = new HashSet<>();
+        //System.out.println(binarySearch(list, 57));
 
-        mySet.add(4);
-        mySet.add(4);
-        mySet.add(5);
-        mySet.addAll(number);
-        Arrays.sort(myArr);
-        System.out.println(mySet);
+        //System.out.println("sum :" + soutMe(10));
 
-        // check it out how it works ????
-        //Object[] h = mySet.toArray();
-        //System.out.println(h[0]);
+        Collections.sort(list);
+        System.out.println(list);
+        System.out.println(binarySearchRecursive(list, 57, 0, list.size() - 1));
+    }
 
-        Iterator<Integer> it = mySet.iterator();
-        while (it.hasNext()){
-            System.out.println(it.next());
+    public static int binarySearch(ArrayList<Integer> list, int key){
+        Collections.sort(list);
+        int start = list.get(0);
+        int end = list.get(list.size()-1);
+        int mid = (start + end)/2;
+
+        while(mid != key){
+            if(key > mid){
+                start = mid;
+                mid = (start + end)/2;
+            }else {
+                end = mid;
+                mid = (start + end)/2;
+            }
+        }
+        return mid;
+    }
+
+    public static int soutMe(int countDown){
+        int sum =0;
+        sum += countDown;
+        if(countDown != 0){
+            sum +=  soutMe(countDown - 1);
         }
 
+        return sum;
+    }
+
+    public static int binarySearchRecursive(ArrayList<Integer> list, int key, int start, int end){
+        int mid = (start + end) / 2;
+        //System.out.println("start = " + start);
+        //System.out.println("end = " + end);
+        //System.out.println("mid = " + mid);
+        if(key == list.get(mid)) return mid;
+        else if(key < list.get(mid)){
+            return binarySearchRecursive(list,key,start,mid - 1);
+        }else{
+            return  binarySearchRecursive(list,key,mid + 1,end);
+        }
     }
 }
